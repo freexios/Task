@@ -1,0 +1,111 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="17156" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17125"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Discover-->
+        <scene sceneID="JgT-X2-rg5">
+            <objects>
+                <viewController storyboardIdentifier="MoviesListViewController" id="UIM-ui-iuI" customClass="MoviesListViewController" customModule="MovieApp" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="JmM-GW-nrX">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="EJ6-cf-gWC">
+                                <rect key="frame" x="0.0" y="44" width="414" height="769"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                        <real key="value" value="5"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                            </tableView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="oFK-el-6lB"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="EJ6-cf-gWC" firstAttribute="top" secondItem="oFK-el-6lB" secondAttribute="top" id="2RU-bc-jeC"/>
+                            <constraint firstItem="EJ6-cf-gWC" firstAttribute="leading" secondItem="oFK-el-6lB" secondAttribute="leading" id="4E4-fW-aZ4"/>
+                            <constraint firstItem="oFK-el-6lB" firstAttribute="trailing" secondItem="EJ6-cf-gWC" secondAttribute="trailing" id="EEP-Yl-9iI"/>
+                            <constraint firstItem="oFK-el-6lB" firstAttribute="bottom" secondItem="EJ6-cf-gWC" secondAttribute="bottom" id="N7N-5z-Xpl"/>
+                        </constraints>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="Discover" id="xo5-GL-owO"/>
+                    <connections>
+                        <outlet property="tblMovies" destination="EJ6-cf-gWC" id="QQz-An-XFm"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="KwR-ol-HTY" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1056.8" y="118.29085457271366"/>
+        </scene>
+        <!--Tab Bar Controller-->
+        <scene sceneID="pzB-Vj-WR6">
+            <objects>
+                <tabBarController storyboardIdentifier="RootTabBar" automaticallyAdjustsScrollViewInsets="NO" id="eHn-jG-PNV" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="ycZ-Qt-R5h">
+                        <rect key="frame" x="0.0" y="0.0" width="1000" height="1000"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    </tabBar>
+                    <connections>
+                        <segue destination="UIM-ui-iuI" kind="relationship" relationship="viewControllers" id="BTI-x9-4jt"/>
+                        <segue destination="qI4-IM-hM6" kind="relationship" relationship="viewControllers" id="rhZ-g5-kwZ"/>
+                    </connections>
+                </tabBarController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="FJk-mc-KDl" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="117.59999999999999" y="118.29085457271366"/>
+        </scene>
+        <!--Search-->
+        <scene sceneID="yU0-Cc-u7p">
+            <objects>
+                <viewController storyboardIdentifier="SearchViewController" id="qI4-IM-hM6" customClass="SearchViewController" customModule="MovieApp" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="kO3-PM-9Fl">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="60" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="DTI-fs-TJm">
+                                <rect key="frame" x="0.0" y="100" width="414" height="713"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                        <real key="value" value="5"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                            </tableView>
+                            <searchBar contentMode="redraw" barStyle="black" searchBarStyle="minimal" translucent="NO" translatesAutoresizingMaskIntoConstraints="NO" id="eZI-ve-QcL">
+                                <rect key="frame" x="0.0" y="44" width="414" height="56"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </searchBar>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="5sC-vq-DG4"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="DTI-fs-TJm" firstAttribute="leading" secondItem="5sC-vq-DG4" secondAttribute="leading" id="0wW-Tg-jlV"/>
+                            <constraint firstItem="5sC-vq-DG4" firstAttribute="bottom" secondItem="DTI-fs-TJm" secondAttribute="bottom" id="Pgj-HD-qMK"/>
+                            <constraint firstItem="DTI-fs-TJm" firstAttribute="top" secondItem="eZI-ve-QcL" secondAttribute="bottom" id="Ree-1h-fdR"/>
+                            <constraint firstItem="DTI-fs-TJm" firstAttribute="trailing" secondItem="5sC-vq-DG4" secondAttribute="trailing" id="V2j-I1-yPQ"/>
+                            <constraint firstItem="eZI-ve-QcL" firstAttribute="leading" secondItem="kO3-PM-9Fl" secondAttribute="leading" id="aZb-CV-FcA"/>
+                            <constraint firstItem="5sC-vq-DG4" firstAttribute="trailing" secondItem="eZI-ve-QcL" secondAttribute="trailing" id="bVE-sW-ezB"/>
+                            <constraint firstItem="eZI-ve-QcL" firstAttribute="top" secondItem="5sC-vq-DG4" secondAttribute="top" id="kuU-4r-8HE"/>
+                        </constraints>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="Search" id="Jvc-7E-TcW"/>
+                    <connections>
+                        <outlet property="searchBar" destination="eZI-ve-QcL" id="an6-D4-e6a"/>
+                        <outlet property="tblMovies" destination="DTI-fs-TJm" id="X0n-aX-H80"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="99P-Tx-lhw" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="117.39130434782609" y="796.875"/>
+        </scene>
+    </scenes>
+</document>
